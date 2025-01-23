@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-// Import du logo 
-// Import du titre de la navbar
 import Link from "next/link";
 
 
 export default function Header() {
     return (
-        <header>
-            
+        <header className=" bg">
+            <div className="containerNav ">
+                <div className="containerLogo"></div>
+                <div className="containerNavLinks"></div>
+                <div className="containerIcon"></div>
+            </div>
         </header>
     );
 }
