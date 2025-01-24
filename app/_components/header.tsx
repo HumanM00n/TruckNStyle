@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className=" bg">
+        <header className=" ">
             <div className="containerNav ">
                 <div className="containerLogo"></div>
                 <div className="containerNavLinks"></div>
