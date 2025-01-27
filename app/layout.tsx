@@ -11,7 +11,12 @@ config.autoAddCss = false; // Désactive l'ajout automatique des styles //    |
 // -----------------HEADER---------------------
 import Header from './_components/header'; // |
 //---------------------------------------------
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "A définir",
+  description: "A définir"
+};
 
 export default function RootLayout({
   children,
