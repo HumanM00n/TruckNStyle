@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"], // Ajoute Montserrat comme font personnalisée
+        montserrat: ["Montserrat", "sans-serif"],
       }
     },
   },
