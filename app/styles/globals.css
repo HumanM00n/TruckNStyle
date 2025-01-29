@@ -11,9 +11,14 @@
   --bleuGris: #4F5372;
   --marronNoisette: #8C5744;
   --grisArdoiseMid: #333140;
-  --marronNoisetteMid: #8C5744;
+  /* --marronNoisetteMid: #8C5744; */
+  --marronNoisetteMid: #c07a61;
   --marronNoisetteTert: #4F5372;
   --blanc : #FBFBFB;
+}
+
+.hoverMarron:hover {
+  color: var(--marronNoisetteMid);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +29,7 @@
 }
 
 body {
-  color: var(--foreground);
+  color: var(--noir);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
