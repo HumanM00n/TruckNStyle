@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Component } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ export default function Header() {
                     />
                 </div>
 
-                <div className="containerNavLinks h-20 border border-light rounded-sm flex align-center py-6 mt-5 pr-6 pl-6 gap-16">
+                <div className="containerNavLinks h-20 border border-light rounded-md flex align-center py-6 mt-5 pr-6 pl-6 gap-16">
                     <Link href="/">Réservations</Link>
                     <Link href="/">À propos</Link>
                     <Link href="/">Contactez-nous</Link>
