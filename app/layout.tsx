@@ -10,12 +10,6 @@ config.autoAddCss = false; // Désactive l'ajout automatique des styles //
 import Header from './_components/header'; 
 
 import type { Metadata } from "next";
-import { SessionProvider } from 'next-auth/react';
-
-
-
-
-
 
 export const metadata: Metadata = {
   title: "A définir",
@@ -36,8 +30,6 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-      <SessionProvider />
-
 
         {children}
       </body>
