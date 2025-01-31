@@ -5,14 +5,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useSession, signIn } from "next-auth/react";
 
 export default function Header() {
+    // MENU BURGER
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = () => {
         setMenuOpen(!menuOpen);
         console.log(menuOpen);
     };
+
+    const { data: session } = useSession();
 
     return (
         <header className="w-full h-auto flex justify-center font-montserrat bg-black text-base text-white z-50">
@@ -32,19 +36,36 @@ export default function Header() {
                 </div>
 
 
-                {/* Barre de navigation (cachée sur mobile) */}
+                {/* Barre de navigation */}
                 <nav className="hidden lg:flex h-20 border border-gray-300 rounded-md items-center py-6 px-6 gap-16">
                     <Link className="hoverMarron" href="/">Réservations</Link>
                     <Link className="hoverMarron" href="/">À propos</Link>
                     <Link className="hoverMarron" href="/">Contactez-nous</Link>
                 </nav>
 
-                {/* Connexion et Inscription (cachés sur mobile) */}
+                {/* Connexion et Inscription */}
                 <div className="hidden lg:flex h-20 w-60 justify-center gap-6 items-center">
                     <Link className="hoverMarron" href="/pages/login">Connexion</Link> {/* Lien ajouté pour faire des tests */}
                     <Link className="hoverMarron" href="">Inscription</Link>
                 </div>
 
+                {session?.user(
+                    <div className="hidden lg:flex h-20 w-60 justify-center gap-6 items-center">
+                        <Image
+                            src={session.user.image || }
+                            alt="Photo de profil"
+                            width={40}
+                            height={40}
+                            className="rounded-full cursor-pointer"
+                        />
+
+                    </div>
+                )}
+
+
+                {/*---------------------------------------------
+                 |               MENU BUGER                     |
+                -----------------------------------------------*/}
 
                 {/* Menu Burger (Visible uniquement sur mobile) */}
                 <button className="lg:hidden text-white text-2xl" onClick={handleClick}>
