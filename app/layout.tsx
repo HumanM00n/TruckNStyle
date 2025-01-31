@@ -1,17 +1,21 @@
 // -------------My CSS-------------------
-import '@/app/styles/globals.css' //    |
-//---------------------------------------
+import '@/app/styles/globals.css' 
 
 // ------------------------------FONTAWESOME----------------------------------
-import { config } from '@fortawesome/fontawesome-svg-core'; //               |
-import '@fortawesome/fontawesome-svg-core/styles.css'; // Import du CSS      | 
-config.autoAddCss = false; // Désactive l'ajout automatique des styles //    |
-//----------------------------------------------------------------------------
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import du CSS       
+config.autoAddCss = false; // Désactive l'ajout automatique des styles //    
 
 // -----------------HEADER---------------------
-import Header from './_components/header'; // |
-//---------------------------------------------
+import Header from './_components/header'; 
+
 import type { Metadata } from "next";
+import { SessionProvider } from 'next-auth/react';
+
+
+
+
+
 
 export const metadata: Metadata = {
   title: "A définir",
@@ -32,6 +36,8 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+      <SessionProvider />
+
 
         {children}
       </body>
