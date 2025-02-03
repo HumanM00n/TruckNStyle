@@ -1,17 +1,31 @@
+'use client';
+
+import RootLayout from "@/app/layout";
+import { useState } from "react";
+import loginForm from "@/app/ui/login";
+
 export default function loginPage() {
     return (
-        
-        <form action="" className="flex justify-center border-2 border-red-50 h-auto w-auto">
-            <div className="containerForm block">
-                <label htmlFor="inputEmail" className="text-white">Adresse email</label>
-                <input type="email" name="inputEmail" id="inputEmail" placeholder="Email" className="mr-4"/>
+        <div className="">
+            <div className="border-1 border-red-500 w-60 h-72 z-0">
 
-                <label htmlFor="inputPassword" className="text-white">Mot de passe</label>
-                <input type="password" name="inputPassword" id="inputPassword" />
+                <form action="" className="">
+                    <h1>Connexion</h1>
+                    <div className="emailForm">
+                        <input type="email" className="form-control" id="inputForEmail" />
+                    </div>
+
+                    <div className="passwordFrom">
+                        <input type="password" className="form-control" id="" />
+                    </div>
+                </form>
+
+
+
+                
+                <div className=""></div>
             </div>
-
-        </form>
-
+        </div>
     );
 }
 
