@@ -16,8 +16,6 @@ export default function Header() {
         console.log(menuOpen);
     };
 
-    const { data: session } = useSession();
-
     return (
         <header className="w-full h-auto flex justify-center font-montserrat bg-black text-base text-white z-50">
             <div className="containerNav max-w-screen-2xl flex flex-grow items-center justify-between p-4">
@@ -49,7 +47,7 @@ export default function Header() {
                     <Link className="hoverMarron" href="">Inscription</Link>
                 </div>
 
-                {session?.user(
+                {/* {session?.user(
                     <div className="hidden lg:flex h-20 w-60 justify-center gap-6 items-center">
                         <Image
                             src={session.user.image || }
@@ -60,7 +58,7 @@ export default function Header() {
                         />
 
                     </div>
-                )}
+                )} */}
 
 
                 {/*---------------------------------------------
