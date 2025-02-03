@@ -26,9 +26,6 @@ export async function POST(req: Request) {
 
         // Vérification de JWT_SECRET
         const secret = process.env.JWT_SECRET;
-        if (!secret) {
-            throw new Error("JWT_SECRET n'est pas défini");
-        }
 
         // Génération d'un token JWT 
         const genTokenTns = jwt.sign({ userId: user.id, email: user.email }, secret as string, { expiresIn: "1h" });
