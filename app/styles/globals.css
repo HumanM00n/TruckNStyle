@@ -15,6 +15,7 @@
   --marronNoisetteMid: #c07a61;
   --marronNoisetteTert: #4F5372;
   --blanc : #FBFBFB;
+  --bg-form: #733E34;
 }
 
 @layer components {
