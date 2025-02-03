@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '@/app/styles/globals.css';
 
 
-// ✅ Metadata fonctionne ici
+
 export const metadata: Metadata = {
   title: "A définir",
   description: "A définir"
