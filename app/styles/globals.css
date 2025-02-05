@@ -9,13 +9,12 @@
   --noir: #1A1A1A;
   --grisArdoise: #333140;
   --bleuGris: #4F5372;
-  --marronNoisette: #8C5744;
-  --grisArdoiseMid: #333140;
+  --bg-form: #733E34; /* marron CHocolat -> Figma */
   --marronNoisetteMid: #8C5744;
-  --marronNoisetteMid: #c07a61;
+  --grisArdoiseMid: #333140;
+  --marronNoisette70: #c07a61;
   --marronNoisetteTert: #4F5372;
   --blanc : #FBFBFB;
-  --bg-form: #733E34;
 }
 
 @layer components {
