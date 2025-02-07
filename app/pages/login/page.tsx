@@ -2,54 +2,69 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import '@/app/styles/globals.css';
 
 export default function loginPage() {
     return (
-        <div className="border-2 border-red-500 w-full max-h-full h-[715px]">
-            <div className="border-1 border-blue-500 flex w-full">
+        <div className=" w-full h-[715px] flex items-center justify-center relative backgroundColor" >
+            {/* CONTAINER IMAGE */}
+            <div className="w-2/5 h-full relative left-96">
+                <img
+                    src="/assets/photoTondeuse.jpg"
+                    className="w-full h-full object-cover"
+                    alt="Photo d'une tondeuse"
+                />
+            </div>
 
-                <div className="border-1 border-green-600 w-3/6 flex justify-end">
-                    <form action="" className="border-1 border-pink-200 bg-[#733E34] py-12 rounded-md px-8 ">
-                        <h1 className="text-light text-3xl font-[500] font-playfair text-center">Connexion</h1>
-                        <div className="grid grid-cols-1 gap-y-6 mt-10">
+            {/* FORMULAIRE DE CONNEXION */}
+            <div className="absolute left-2/4 transform -translate-x-3/4 bg-[#733E34] p-12 px-40 rounded-md text-sm shadow-lg w-[600px]">
+                <form action="" className="font-montserrat z-10">
+                    <h1 className="text-light text-3xl font-[500] font-playfair text-center">Connexion</h1>
 
-                            <input type="email" className="form-control w-74
-                            placeholder-[#8C5744] placeholder-opacity-70 focus:outline-none focus:ring-4 focus:ring-[#FBFBFB] 
-                            py-2.5 px-4" id="inputForEmail" placeholder="Email" />
-                            <input type="password" className="form-control w-74 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70" id="inputForPaswword" placeholder="Mot de passe" />
-                        </div>
+                    <div className="grid grid-cols-1 gap-y-6 mt-10">
+                        {/* ADRESSE EMAIL */}
+                        <input
+                            type="email"
+                            className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
+                            id="inputForEmail"
+                            placeholder="Email"
+                        />
 
+                        {/* MOT DE PASSE */}
+                        <input
+                            type="password"
+                            className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
+                            id="inputForPassword"
+                            placeholder="Mot de passe"
+                        />
+                    </div>
 
-                        <div className="underline underline-offset-1 text-light font-montserrat mt-6">
-                            <Link href={""}>J&apos;ai oublié mon mot de passe </Link>
-                        </div>
+                    <div className="underline underline-offset-1 text-light font-montserrat mt-6">
+                        <Link href={""}>J&apos;ai oublié mon mot de passe</Link>
+                    </div>
 
-                        <div className="mt-4 flex justify-end">
-                            <button type="button" className="btn btn-outline-light">Se connecter</button>
-                        </div>
+                    <div className="mt-4 flex justify-end">
+                        <button type="submit" className="btn btn-outline-light rounded-xs hover:bg-white hover:text-[#733E34]">
+                            Se connecter
+                        </button>
+                    </div>
 
+                    <div className="flex items-center my-10">
+                        <hr className="flex-grow border-white" />
+                        <span className="mx-4 text-light">OU</span>
+                        <hr className="flex-grow border-white" />
+                    </div>
+ 
+                    <div className="underline underline-offset-1 text-light font-montserrat mt-6 text-xs">
+                        <Link href={"#"}>Vous n&apos;avez pas de compte ? Créez-en un !</Link>
+                    </div>
 
-                        <div className="flex items-center my-10">
-                            <hr className="flex-grow border-white" />
-                            <span className="mx-4 text-light">OU</span>
-                            <hr className="flex-grow border-white" />
-                        </div>
-
-
-
-                        <div className="underline underline-offset-1 text-light font-montserrat mt-6">
-                            <Link href={"#"}>Vous n&apos;avez pas de compte ? Créer en un ! </Link>
-                        </div>
-
-                        <div className="">
-                            <button type="button" className="btn btn-outline-light mt-3 w-full">Se connecter</button>
-                        </div>
-                    </form>
-                </div>
-
-
-
-                <div className=""></div>
+                    <div className="mt-3">
+                        <button type="button" className="btn btn-light w-full text-[#8C5744] hover:text-[#8C5744]">
+                            Créer un compte
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     );
