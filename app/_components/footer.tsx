@@ -9,8 +9,18 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export default function Footer() {
 
     return (
-        <footer className="border-2 border-red-600">
-            <div className=""></div>
+        <footer className="border-2 border-red-600 w-full h-auto">
+            
+            {/* Logo */}
+            <div className="w-36 border-2">
+                <Image 
+                src={"/logo/logoTNS-white.png"}
+                width={350}
+                height={200}
+                quality={90}
+                alt="Logo de l'application en blanc"
+                />
+            </div>
 
             <div className=""></div>
 
