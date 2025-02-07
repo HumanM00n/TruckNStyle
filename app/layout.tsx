@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
 import Header from './_components/header';
+import Footer from './_components/footer';
 import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import '@/app/styles/globals.css';
@@ -26,6 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         {children}
+
+        <Footer />
       </body>
     </html>
   );
