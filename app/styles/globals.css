@@ -17,9 +17,51 @@
   --blanc : #FBFBFB;
 }
 
-.backgroundColor {
+/* Noir */
+.bg--noir {
   background-color: var(--noir);
 }
+
+/* Gris Ardoise */
+.bg--grisArdoise {
+  background-color: var(--grisArdoise);
+}
+
+/* Bleu Gris */
+.bg--bleuGris {
+  background-color: var(--bleuGris);
+}
+
+/* Marron Form */
+.bg--form {
+  background-color: var(--bg-form);
+}
+
+/* Marron Noisette */
+.bg--marronNoisetteMid {
+  background-color: var(--marronNoisetteMid);
+}
+
+/* Gris Ardoise 50% */
+.bg--grisArdoiseMid {
+  background-color: var(--grisArdoiseMid);
+}
+
+/* Marron noisette 70% */
+.bg--marronNoisette70 {
+  background-color: var(--marronNoisette70);
+}
+
+/* Marron Noisette 70 */
+.bg--marronNoisette70 {
+  background-color: var(--marronNoisetteTert);
+}
+
+/* Blanc */
+.bg--blanc {
+  background-color: var(--blanc);
+}
+
 
 @layer components {
 
