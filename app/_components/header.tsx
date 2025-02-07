@@ -17,7 +17,7 @@ export default function Header() {
     };
 
     return (
-        <header className="w-full h-auto flex justify-center font-montserrat bg-black text-base text-white z-50">
+        <header className="w-full h-auto flex justify-center font-montserrat bg-[#1A1A1A] text-base text-white z-50">
             <div className="containerNav max-w-screen-2xl flex flex-grow items-center justify-between p-4">
 
                 {/* Logo */}
@@ -74,7 +74,7 @@ export default function Header() {
             {/* Menu Mobile (Affiché si menuOpen est vrai) */}
             {menuOpen && (
                 <div className="lg:hidden absolute bg-black top-20 left-0 w-full flex flex-col items-center gap-4 py-4 mt-14 z-10">
-                    <Link className="hoverMarron" href="/">Réservations</Link>
+                    <Link className="hoverMarron" href="/pages">Réservations</Link>
                     <Link className="hoverMarron" href="/">À propos</Link>
                     <Link className="hoverMarron" href="/">Contactez-nous</Link>
                     <Link className="hoverMarron" href="/pages/login">Connexion</Link>
