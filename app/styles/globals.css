@@ -17,6 +17,10 @@
   --blanc : #FBFBFB;
 }
 
+.backgroundColor {
+  background-color: var(--noir);
+}
+
 @layer components {
 
 .hoverMarron:hover {
