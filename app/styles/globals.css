@@ -17,50 +17,121 @@
   --blanc : #FBFBFB;
 }
 
-/* Noir */
+/*---------------------------------- 
+                NOIR                |
+-----------------------------------*/
 .bg--noir {
   background-color: var(--noir);
 }
 
-/* Gris Ardoise */
+.color--noir {
+  color: var(--noir);
+}
+
+
+/*---------------------------------- 
+           GRIOS ARDOISE           |
+-----------------------------------*/
 .bg--grisArdoise {
   background-color: var(--grisArdoise);
 }
 
-/* Bleu Gris */
+.color--grisArdoise {
+  color: var(--grisArdoise);
+}
+
+
+/*---------------------------------- 
+            BLEU GRIS              |
+-----------------------------------*/
 .bg--bleuGris {
   background-color: var(--bleuGris);
 }
 
-/* Marron Form */
+.color--bleuGris {
+  color: var(--bleuGris);
+}
+
+
+/*---------------------------------- 
+            MARRON FORM            |
+-----------------------------------*/
 .bg--form {
   background-color: var(--bg-form);
 }
 
-/* Marron Noisette */
+.color--form {
+  color: var(--bg-form);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE          |
+-----------------------------------*/
 .bg--marronNoisetteMid {
   background-color: var(--marronNoisetteMid);
 }
 
-/* Gris Ardoise 50% */
+.color--marronNoisetteMid {
+  color: var(--marronNoisetteMid);
+}
+
+
+/*---------------------------------- 
+          GRIS ARDOISE 50%          |
+-----------------------------------*/
 .bg--grisArdoiseMid {
   background-color: var(--grisArdoiseMid);
 }
 
-/* Marron noisette 70% */
+
+.color--grisArdoiseMid {
+  color: var(--grisArdoiseMid);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE 70%       |
+-----------------------------------*/
 .bg--marronNoisette70 {
   background-color: var(--marronNoisette70);
 }
 
-/* Marron Noisette 70 */
+.color--marronNoisette70 {
+  color: var(--marronNoisette70);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE 70%       |
+-----------------------------------*/
 .bg--marronNoisette70 {
   background-color: var(--marronNoisetteTert);
 }
 
-/* Blanc */
+.color--marronNoisette70 {
+  color: var(--marronNoisetteTert);
+}
+
+
+/*---------------------------------- 
+              BLANC                 |
+-----------------------------------*/
 .bg--blanc {
   background-color: var(--blanc);
 }
+
+
+.color--blanc {
+  color: var(--blanc);
+}
+
+
+/*---------------------------------- 
+              OTHER                 |
+-----------------------------------*/
+
+
 
 
 @layer components {
