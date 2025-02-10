@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function loginPage() {
     return (
-        <div className=" w-full h-[715px] flex items-center justify-center relative bg--noir">
+        <div className="md:w-full h-[715px] flex items-center justify-center relative bg--noir">
             {/* CONTAINER IMAGE */}
-            <div className="w-2/5 h-full relative left-96">
+            <div className="hidden lg:w-2/5 md:block h-full relative left-96">
                 <img
                     src="/assets/photoTondeuse.jpg"
                     className="w-full h-full object-cover"
@@ -16,7 +16,7 @@ export default function loginPage() {
             </div>
 
             {/* FORMULAIRE DE CONNEXION */}
-            <div className="absolute left-2/4 transform -translate-x-3/4 bg--form p-12 px-40 rounded-md text-sm shadow-lg w-[600px]">
+            <div className="shrink-2 absolute left-2/4 transform -translate-x-3/4 bg--form p-12 px-40 rounded-md text-sm shadow-lg w-[600px]">
                 <form action="" className="font-montserrat z-10">
                     <h1 className="text-light text-3xl font-[500] font-playfair text-center">Connexion</h1>
 
