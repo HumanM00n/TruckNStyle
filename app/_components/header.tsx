@@ -21,7 +21,7 @@ export default function Header() {
             <div className="containerNav max-w-screen-2xl flex flex-grow items-center justify-between p-4">
 
                 {/* Logo */}
-                <div className="containerLogo w-36">
+                <div className="containerLogo w-36 md:w-24">
                     <Link href="/">
                         <Image
                             src="/logo/logoTNS-brown.png"
@@ -35,14 +35,15 @@ export default function Header() {
 
 
                 {/* Barre de navigation */}
-                <nav className="hidden lg:flex h-20 border border-gray-300 rounded-md items-center py-6 px-6 gap-16">
+                <nav className="hidden lg:flex h-20 border border-gray-300 rounded-md items-center py-6 px-6 gap-16 
+                md:text-sm">
                     <Link className="hoverMarron" href="/">Réservations</Link>
                     <Link className="hoverMarron" href="/">À propos</Link>
                     <Link className="hoverMarron" href="/">Contactez-nous</Link>
                 </nav>
 
                 {/* Connexion et Inscription */}
-                <div className="hidden lg:flex h-20 w-60 justify-center gap-6 items-center">
+                <div className="hidden lg:flex h-20 w-60 justify-center gap-6 items-center md:text-sm">
                     <Link className="hoverMarron" href="/pages/login">Connexion</Link> {/* Lien ajouté pour faire des tests */}
                     <Link className="hoverMarron" href="">Inscription</Link>
                 </div>
