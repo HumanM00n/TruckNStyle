@@ -36,18 +36,10 @@ export default function loginPage() {
     
 
     return (
-        <div className="md:w-full h-[715px] flex items-center justify-center relative bg--noir">
-            {/* CONTAINER IMAGE */}
-            <div className="hidden lg:w-2/5 md:block h-full relative left-96">
-                <img
-                    src="/assets/photoTondeuse.jpg"
-                    className="w-full h-full object-cover"
-                    alt="Photo d'une tondeuse"
-                />
-            </div>
+        <div className="md:w-full h-[715px] flex items-center justify-end bg--noir">
 
             {/* FORMULAIRE DE CONNEXION */}
-            <div className="shrink-0 absolute left-2/4 transform -translate-x-3/4 bg--form p-12 px-40 rounded-md text-sm shadow-lg w-[600px]">
+            <div className=" relative left-6 border-2 border-purple-700 shrink-0 bg--form p-12 px-32 rounded-md text-sm shadow-lg md:w-[600px]">
                 <form onSubmit={handleLogin} className="font-montserrat z-10">
                     <h1 className="text-light text-3xl font-[500] font-playfair text-center">Connexion</h1>
 
@@ -55,7 +47,7 @@ export default function loginPage() {
                         {/* ADRESSE EMAIL */}
                         <input
                             type="email"
-                            className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
+                            className="form-control w-full py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
                             id="inputForEmail"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +57,7 @@ export default function loginPage() {
                         {/* MOT DE PASSE */}
                         <input
                             type="password"
-                            className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
+                            className="form-control w-full py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
                             id="inputForPassword"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -99,6 +91,15 @@ export default function loginPage() {
                         </button>
                     </div>
                 </form>
+            </div>
+
+            {/* CONTAINER IMAGE */}
+            <div className="shrink-0 hidden lg:w-2/5 md:block h-full">
+                <img
+                    src="/assets/photoTondeuse.jpg"
+                    className="w-full h-full object-cover"
+                    alt="Photo d'une tondeuse"
+                />
             </div>
         </div>
     );
