@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --noir: #1A1A1A;
+  --grisArdoise: #333140;
+  --bleuGris: #4F5372;
+  --bg-form: #733E34; /* marron CHocolat -> Figma */
+  --marronNoisetteMid: #8C5744;
+  --grisArdoiseMid: #333140;
+  --marronNoisette70: #c07a61;
+  --marronNoisetteTert: #4F5372;
+  --blanc : #FBFBFB;
+}
+
+/*---------------------------------- 
+                NOIR                |
+-----------------------------------*/
+.bg--noir {
+  background-color: var(--noir);
+}
+
+.color--noir {
+  color: var(--noir);
+}
+
+
+/*---------------------------------- 
+           GRIOS ARDOISE           |
+-----------------------------------*/
+.bg--grisArdoise {
+  background-color: var(--grisArdoise);
+}
+
+.color--grisArdoise {
+  color: var(--grisArdoise);
+}
+
+
+/*---------------------------------- 
+            BLEU GRIS              |
+-----------------------------------*/
+.bg--bleuGris {
+  background-color: var(--bleuGris);
+}
+
+.color--bleuGris {
+  color: var(--bleuGris);
+}
+
+
+/*---------------------------------- 
+            MARRON FORM            |
+-----------------------------------*/
+.bg--form {
+  background-color: var(--bg-form);
+}
+
+.color--form {
+  color: var(--bg-form);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE          |
+-----------------------------------*/
+.bg--marronNoisetteMid {
+  background-color: var(--marronNoisetteMid);
+}
+
+.color--marronNoisetteMid {
+  color: var(--marronNoisetteMid);
+}
+
+
+/*---------------------------------- 
+          GRIS ARDOISE 50%          |
+-----------------------------------*/
+.bg--grisArdoiseMid {
+  background-color: var(--grisArdoiseMid);
+}
+
+
+.color--grisArdoiseMid {
+  color: var(--grisArdoiseMid);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE 70%       |
+-----------------------------------*/
+.bg--marronNoisette70 {
+  background-color: var(--marronNoisette70);
+}
+
+.color--marronNoisette70 {
+  color: var(--marronNoisette70);
+}
+
+
+/*---------------------------------- 
+          MARRON NOISETTE 70%       |
+-----------------------------------*/
+.bg--marronNoisette70 {
+  background-color: var(--marronNoisetteTert);
+}
+
+.color--marronNoisette70 {
+  color: var(--marronNoisetteTert);
+}
+
+
+/*---------------------------------- 
+              BLANC                 |
+-----------------------------------*/
+.bg--blanc {
+  background-color: var(--blanc);
+}
+
+.color--blanc {
+  color: var(--blanc);
+}
+
+
+/*---------------------------------- 
+              OTHER                 |
+-----------------------------------*/
+
+
+
+
+@layer components {
+
+.hoverMarron:hover {
+  color: var(--marronNoisetteMid);
+}
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--noir);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
