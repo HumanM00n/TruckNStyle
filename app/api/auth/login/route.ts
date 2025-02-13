@@ -6,16 +6,7 @@ export async function POST(req: Request) {
     try {
         console.log("🔹 Requête reçue !");
         const { email, password } = await req.json();
-        console.log("🔹 Email reçu :", email, "Password reçu :", password);
-
-        ///DEBUG
-        console.log("🔍 Config DB :", {
-            host: process.env.DB_HOST,
-            user: process.env.DB_USER,
-            password: process.env.DB_PASSWORD,
-            database: process.env.DB_NAME
-        });
-        
+        console.log("🔹 Email reçu :", email, "Password reçu :", password);      
 
         const [users] = await pool.query("SELECT * FROM tns_users WHERE user_email = ?", [email]);
 

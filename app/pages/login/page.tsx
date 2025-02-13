@@ -1,9 +1,40 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from "react";
 import Link from "next/link";
+    
 
 export default function loginPage() {
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [email, setEmail] = useState("");
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [password, setPassword] = useState("");
+
+
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault();
+    
+        const res = await fetch('/api/auth/login', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+        });
+    
+        const text = await res.text();  // Récupère la réponse brute (pas en JSON)
+        console.log("Réponse brute du serveur :", text);
+    
+        try {
+            const data = JSON.parse(text); // Essaie de parser en JSON
+            console.log("Données JSON parsées :", data);
+        } catch (error) {
+            console.error("Erreur de parsing JSON :", error);
+            return alert("Le serveur a renvoyé une réponse non valide.");
+        }
+    };
+    
+
     return (
         <div className="md:w-full h-[715px] flex items-center justify-center relative bg--noir">
             {/* CONTAINER IMAGE */}
@@ -17,7 +48,7 @@ export default function loginPage() {
 
             {/* FORMULAIRE DE CONNEXION */}
             <div className="shrink-2 absolute left-2/4 transform -translate-x-3/4 bg--form p-12 px-40 rounded-md text-sm shadow-lg w-[600px]">
-                <form action="" className="font-montserrat z-10">
+                <form onSubmit={handleLogin} className="font-montserrat z-10">
                     <h1 className="text-light text-3xl font-[500] font-playfair text-center">Connexion</h1>
 
                     <div className="grid grid-cols-1 gap-y-6 mt-10">
@@ -26,6 +57,8 @@ export default function loginPage() {
                             type="email"
                             className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
                             id="inputForEmail"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
                         />
 
@@ -34,6 +67,8 @@ export default function loginPage() {
                             type="password"
                             className="form-control w-72 py-2.5 px-4 placeholder-[#8C5744] placeholder-opacity-70 focus:ring-[#8C5744] focus:border-[#8C5744] focus:ring-4"
                             id="inputForPassword"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="Mot de passe"
                         />
                     </div>
