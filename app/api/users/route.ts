@@ -40,7 +40,7 @@ export async function GET(req: Request) {
         let values: string[]; 
 
         if (userId) {
-            query = 'SELECT * tns_users WHERE id_users = ?';
+            query = 'SELECT * FROM tns_users WHERE id_users = ?';
             values = [userId];
         } else {
             query = 'SELECT * from tns_users';
