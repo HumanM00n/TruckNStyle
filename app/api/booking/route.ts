@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import pool from "@/app/_lib/db";
+import { RowDataPacket } from "mysql2";
 
 // Récupération de toutes les réservations
 export async function GET(req: Request) {
@@ -8,7 +9,7 @@ export async function GET(req: Request) {
         const userId = searchParams.get("userId");
 
         let query = "SELECT id_reservation, id_haircut, reservation_datetime, reservation_price_haircut, id_hairdresser FROM tns_reservation";
-        let values: any[] = [];
+        const values: (string | number)[] = [];
 
         if (userId) {
             query += " WHERE id_hairdresser = ?";
@@ -16,7 +17,11 @@ export async function GET(req: Request) {
         }
 
         const [reservations] = await pool.query(query, values);
-        return NextResponse.json(reservations);
+
+        // Typage explicite du résultat de la requête
+        const formattedReservations = reservations as RowDataPacket[];
+
+        return NextResponse.json(formattedReservations);
     } catch (error) {
         console.error("Erreur lors de la récupération des réservations :", error);
         return NextResponse.json({ message: "Erreur serveur" }, { status: 500 });
@@ -55,14 +60,15 @@ export async function POST(req: Request) {
             id_hairdresser
         ]);
 
-        return NextResponse.json({ message: "Réservation créée", id: (result as any).insertId });
+        const insertId = (result as { insertId: number }).insertId;
+        return NextResponse.json({ message: "Réservation créée", id: insertId });
     } catch (error) {
         console.error("Erreur lors de la création de la réservation :", error);
         return NextResponse.json({ message: "Erreur serveur" }, { status: 500 });
     }
 }
 
-//  Mise à jour d'une réservation
+// Mise à jour d'une réservation
 export async function PUT(req: Request) {
     try {
         const { id_reservation, reservation_datetime, reservation_duration_haircut, reservation_price_haircut } = await req.json();
@@ -74,7 +80,10 @@ export async function PUT(req: Request) {
         const checkQuery = "SELECT id_reservation FROM tns_reservation WHERE id_reservation = ?";
         const [existingReservations] = await pool.query(checkQuery, [id_reservation]);
 
-        if (existingReservations.length === 0) {
+        // Typage explicite de la réponse SQL
+        const formattedReservations = existingReservations as RowDataPacket[];
+
+        if (formattedReservations.length === 0) {
             return NextResponse.json({ message: "Réservation introuvable" }, { status: 404 });
         }
 
@@ -101,12 +110,13 @@ export async function DELETE(req: Request) {
         const { searchParams } = new URL(req.url);
         const id_reservation = parseInt(searchParams.get("id") || "", 10);
 
-        
-
         const checkQuery = "SELECT id_reservation FROM tns_reservation WHERE id_reservation = ?";
         const [existingReservations] = await pool.query(checkQuery, [id_reservation]);
 
-        if (existingReservations.length === 0) {
+        // Typage explicite de la réponse SQL
+        const formattedReservations = existingReservations as RowDataPacket[];
+
+        if (formattedReservations.length === 0) {
             return NextResponse.json({ message: "Réservation introuvable" }, { status: 404 });
         }
 
