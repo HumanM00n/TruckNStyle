@@ -3,8 +3,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
-import Header from './_components/header';
-import Footer from './_components/footer';
+import LayoutWrapper from './_components/layoutWrapper';
 import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import '@/app/styles/globals.css';
@@ -17,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  
   return (
     <html lang="en">
       <head>
@@ -25,14 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        {/* Composants */}
-        <Header />
         
-        {/* Pages */}
-        {children}
-
-        {/* Composants */}
-        <Footer />
+        {/* Composants Header*/} {/* Pages */} {/* Composants Footer*/}
+        <LayoutWrapper>{children}</LayoutWrapper>
+        
       </body>
     </html>
   );
