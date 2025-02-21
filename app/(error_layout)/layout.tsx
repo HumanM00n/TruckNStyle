@@ -1,12 +1,19 @@
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: "404 | Not found",
-  description: "A définir"
-};
+  title: '404',
+  description: 'Cette pag est introuvable'
+}
 
-export default function ErrorLayout({ children }: { children: React.ReactNode }) {
-    return <main className="flex items-center justify-center min-h-screen bg-gray-100 text-black">{children}</main>;
-  }
-  
+export default function ErrorLayout() {
+  return (
+    <html lang="fr">
+      <head>
+        <title>Erreur | Mon Site</title>
+      </head>
+      <body>
+        <main></main> {/* Ce layout ne dépend pas du parent */}
+      </body>
+    </html>
+  );
+}
