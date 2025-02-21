@@ -1,11 +1,9 @@
-import Header from "../_components/header";
-import Footer from "../_components/footer";
-import RootLayout from "../layout";
+import { title } from "process";
+
+
 
 
 
 export default function Home() {
-    return (
-        <></>
-    );
+
 }
