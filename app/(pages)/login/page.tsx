@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { useState } from "react";
+
 import Link from "next/link";
-import DefaultLayout from "../layout";
-    
+import { useState } from "react";
 
 export default function loginPage() {
-
+  
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [email, setEmail] = useState("");
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -37,6 +36,7 @@ export default function loginPage() {
     
 
     return (
+
         <div className="md:w-full h-[715px] flex items-center justify-center relative bg--noir">
             {/* CONTAINER IMAGE */}
             <div className="hidden lg:w-2/5 md:block h-full relative left-96">
